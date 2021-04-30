@@ -4,7 +4,7 @@
 	"description": "Discord bot ",
 	"main": "index.js",
 	"scripts": {
-	  	"start": "node src/index.js",
+		"start": "node src/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -14,13 +14,14 @@
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-    	"url": "https://github.com/Duckus6/Grea-Bot/issues"
+		"url": "https://github.com/Duckus6/Grea-Bot/issues"
 	},
 	"homepage": "https://github.com/Duckus6/Grea-Bot#readme",
 	"dependencies": {
-    	"discord.js": "^12.5.3",
-    	"dotenv": "^8.2.0",
-    	"prop-types": "^15.7.2",
-    	"twitter": "^1.7.1"
-  	}
+		"axios": "^0.21.1",
+		"discord.js": "^12.5.3",
+		"dotenv": "^8.2.0",
+		"prop-types": "^15.7.2",
+		"twitter": "^1.7.1"
+	}
 }
