@@ -23,14 +23,17 @@ client.once('ready', () => {
 })
 
 const messageCheck = (msg) => {
-	return (msg.content[0] === prefix || !msg.author.bot ||msg.channel.contains(spamChannel))
+	console.log(msg.content[0], prefix)
+	return (msg.content[0] === prefix && !msg.author.bot && msg.channel.contains(spamChannel))
 }
 
 client.on('message', (msg) => {
-	const args = msg.content.slice(prefix.length).trim().split(/ +/); 
+	
+	const args = msg.content.slice(prefix.length).trim().split(/ +/)
 	const command = args.shift().toLowerCase()
-	if (!(client.commands.has(command) || messageCheck(msg))) return;
+	if (!(client.commands.has(command) || messageCheck(msg))) return
 	try {
+		console.log(client.commands)
 		console.log(client.commands.get(command))
 		client.commands.get(command).execute(msg, args);
 	} catch (error) {
